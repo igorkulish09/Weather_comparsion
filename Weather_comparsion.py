@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 async def fetch_weather_data_hgbrasil():
     api_url = "https://api.hgbrasil.com/weather"
     params = {
-        "key": "8710fd8f9d34a216bf42cb362b736263",
+        "key": "*",
         "woeid": 455825,
     }
     async with aiohttp.ClientSession() as session:
@@ -28,7 +28,7 @@ async def fetch_weather_data_hgbrasil():
 async def fetch_weather_data_weatherstack():
     api_url = "https://api.weatherstack.com/current"
     params = {
-        "access_key": "2578e7e6b23b5f9ae610cda221cf9ed1",
+        "access_key": "**",
         "query": "San Francisco, United States of America",
     }
     async with aiohttp.ClientSession() as session:
@@ -39,7 +39,7 @@ async def fetch_weather_data_weatherstack():
 async def fetch_weather_data_accuweather():
     api_url = "https://dataservice.accuweather.com/currentconditions/v1/12345"  # Пример идентификатора местоположения
     params = {
-        "apikey": "3818e9ceef2a4365ab1d728f283c51ed",
+        "apikey": "***",
     }
     async with aiohttp.ClientSession() as session:
         async with session.get(api_url, params=params) as response:
